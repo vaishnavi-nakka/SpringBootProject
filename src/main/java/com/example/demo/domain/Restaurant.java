@@ -2,16 +2,14 @@ package com.example.demo.domain;
 
 import java.math.BigDecimal;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+
+@Document
 public class Restaurant {
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private int restaurantId;
 	private String restaurantName;
 	private String restaurantLoc;
